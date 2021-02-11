@@ -17,6 +17,7 @@ install:
 script:
   - cd decide
   - python manage.py test mixnet
+"""  
 deploy:
   provider: heroku
   app: alorodlla-egc-examen
