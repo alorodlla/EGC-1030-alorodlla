@@ -16,6 +16,12 @@ install:
   - pip install -r requirements.txt
 script:
   - cd decide
+  - cp travis_local_settings.py local_settings.py
   - 'if [ $TRAVIS_BRANCH == "master" ]; then
     python manage.py test mixnet;
   fi'
+deploy:
+  provider: heroku
+  app: egc-app-examen
+  strategy: git
+  api_key: $HEROKU_AUTH_TOKEN  
