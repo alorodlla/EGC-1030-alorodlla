@@ -17,8 +17,8 @@ install:
 script:
   - cd decide
   - python manage.py test mixnet
-#deploy:
-#  provider: heroku
-#  app: alorodlla-egc-examen
-#  strategy: git
-#  api_key: $HEROKU_AUTH_TOKEN
+deploy:
+  provider: heroku
+  app: alorodlla-egc-examen
+  strategy: git
+  api_key: $HEROKU_AUTH_TOKEN
