@@ -17,10 +17,10 @@ install:
 script:
   - cd decide
   - python manage.py test
-'if [ $TRAVIS_BRANCH == "master" ]; then  
 deploy:
   provider: heroku
   app: alorodlla-egc-examen
   strategy: git
   api_key: $HEROKU_AUTH_TOKEN
-fi'  
+  on:
+    branch: master
